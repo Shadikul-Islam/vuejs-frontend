@@ -1,5 +1,5 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
@@ -24,23 +24,29 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
-.signup input, .login input {
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    display: block;
-    margin-bottom: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    border: 1px solid skyblue;
+.signup input,
+.login input,
+.modal-header input,
+.modal-body input {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  display: block;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid skyblue;
 }
-.signup button, .login button {
-    width: 320px;
-    height: 40px;
-    border: 1px solid skyblue;
-    background: skyblue;
-    color: #fff;
-    cursor: pointer;
+.signup button,
+.login button,
+.modal-header button,
+.modal-body button {
+  width: 320px;
+  height: 40px;
+  border: 1px solid skyblue;
+  background: skyblue;
+  color: #fff;
+  cursor: pointer;
 }
 
 .studentTable {
@@ -72,7 +78,4 @@ nav a.router-link-exact-active {
 .studentTable tbody tr:hover {
   background-color: #e2e2e2;
 }
-
-
-
 </style>
