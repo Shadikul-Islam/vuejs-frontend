@@ -19,7 +19,7 @@ export default {
       params.append("password", this.password);
       axios
         .post(
-          "http://192.168.26.145/shadikul/backend/index.php/api/students/index_post",
+          "http://192.168.26.145/shadikul/backend/index.php/api/students/",
           params
         )
         .then((response) => {

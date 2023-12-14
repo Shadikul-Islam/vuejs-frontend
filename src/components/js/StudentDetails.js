@@ -31,6 +31,20 @@ export default {
     },
     updateStudents(updatedStudents) {
       this.students = updatedStudents;
+
+      updatedStudents.forEach(async (student) => {
+        const { studentId, ...updatedData } = student;
+        try {          
+          await axios.put(
+            `http://192.168.26.145/shadikul/backend/index.php/api/students/${studentId}`,
+            updatedData
+          );
+
+          console.log(`Student ${studentId} updated in the database`);
+        } catch (error) {
+          console.error(`Error updating student ${studentId}:`, error);
+        }
+      });
     },
     async deleteStudent(studentId) {
       try {
